@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+header {
+  background: #E30613; /* Rot */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h3 {
+  color: #E30613; /* Rot für Abschnittstitel */
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+ul, li {
+  margin: 5px 0;
+}
+
+footer {
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
+}
