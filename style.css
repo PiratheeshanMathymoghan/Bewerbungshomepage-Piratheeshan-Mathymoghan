@@ -1,124 +1,156 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Piratheeshan Mathymoghan – Informatiker EFZ</title>
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f2f2f7;
+  color: #333;
+}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 700;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #E30613, #b1040f);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
 
-<body>
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="profilbild.jpg" class="hero-img" alt="Profilbild">
-      <h1 class="hero-title">Piratheeshan Mathymoghan</h1>
-      <p class="hero-subtitle">Informatiker EFZ – Plattformentwicklung</p>
-    </div>
-  </header>
+.hero-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,0.9);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
 
-  <main>
+.hero-title {
+  font-size: 2.4rem;
+  margin: 0;
+}
 
-    <!-- ÜBER MICH -->
-    <section class="card fade-in">
-      <h2>Über mich</h2>
-      <p>
-        Ich bin ein motivierter Informatiker EFZ in Ausbildung mit Schwerpunkt Plattformentwicklung.
-        Ich arbeite lösungsorientiert, strukturiert und habe Freude daran, technische Herausforderungen
-        effizient zu analysieren und zu beheben. Besonders wichtig ist mir eine saubere Dokumentation
-        und ein professioneller Umgang mit Benutzerinnen und Benutzern.
-      </p>
-    </section>
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
 
-    <!-- TURNKEY SERVICES AG -->
-    <section class="card fade-in">
-      <h2>Lehrbetrieb – TurnKey Services AG</h2>
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
 
-      <div class="turnkey-center">
-        <img src="turnkey.jpg" class="turnkey-img" alt="TurnKey Services AG">
-      </div>
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-      <p>
-        Meine Ausbildung absolvierte ich bei der <strong>TurnKey Services AG</strong>, einem
-        professionellen IT‑Dienstleister mit Fokus auf Infrastruktur, Cloud‑Lösungen und
-        Systemmanagement. Dort konnte ich wertvolle praktische Erfahrungen sammeln und aktiv an
-        realen Kundenprojekten mitarbeiten.
-      </p>
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
 
-      <ul>
-        <li>Client‑ und Netzwerk‑Rollouts</li>
-        <li>Cloud‑Synchronisation & Benutzerverwaltung</li>
-        <li>Server‑Migrationen & Backup‑Konzepte</li>
-        <li>Support im 1st‑ und 2nd‑Level</li>
-        <li>Dokumentation und Systempflege</li>
-      </ul>
-    </section>
+/* TURNKEY */
+.turnkey-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-    <!-- BERUFSERFAHRUNG -->
-    <section class="card fade-in">
-      <h2>Berufserfahrung</h2>
-      <ul>
-        <li>Zwei Jahre der Lehre als Informatiker EFZ, Fachrichtung Plattformentwicklung, absolviert.</li>
-        <li>Mitarbeit bei Client‑Rollouts, Netzwerk‑Rollouts und Cloud‑Synchronisation.</li>
-        <li>Erfassung und Administration von Devices, Benutzerkonten und Cloud‑Services.</li>
-        <li>Unterstützung im 1st‑ und 2nd‑Level‑Support.</li>
-      </ul>
-    </section>
+.turnkey-img {
+  width: 300px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
 
-    <!-- SKILLS -->
-    <section class="card fade-in">
-      <h2>Fähigkeiten</h2>
-      <div class="skills-grid">
-        <span>Client‑Troubleshooting</span>
-        <span>Azure Deployment</span>
-        <span>Active Directory</span>
-        <span>Serverwartung</span>
-        <span>Backup‑Strategien</span>
-        <span>Hardware‑Analyse</span>
-        <span>PowerShell Basics</span>
-        <span>Cloud‑Integration</span>
-      </div>
-    </section>
+/* SKILLS GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
 
-    <!-- PROJEKTE -->
-    <section class="card fade-in">
-      <h2>IT‑Projekte</h2>
-      <ul>
-        <li><strong>Client‑Rollout:</strong> Imaging, Konfiguration, Benutzerübergabe.</li>
-        <li><strong>Netzwerk‑Rollout:</strong> Patch‑Management, Switch‑Konfiguration, Testläufe.</li>
-        <li><strong>Cloud‑Synchronisation:</strong> OneDrive/SharePoint‑Setup, Benutzerverwaltung.</li>
-        <li><strong>Server‑Migration:</strong> Datenübertragung, Backup‑Konzepte, Testumgebungen.</li>
-      </ul>
-    </section>
+.skills-grid span {
+  background: #E30613;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.2s;
+}
 
-    <!-- KONTAKT -->
-    <section class="card fade-in">
-      <h2>Kontakt</h2>
-      <ul>
-        <li>Email: <a href="mailto:piratheeshan@outlook.com">piratheeshan@outlook.com</a></li>
-        <li>Telefon: +41 79 902 08 90</li>
-        <li>Wohnort: Höri, Zürich</li>
-      </ul>
+.skills-grid span:hover {
+  background: #b1040f;
+}
 
-      <!-- DOWNLOAD BUTTON -->
-      <div class="download-container">
-        <a href="lebenslauf.pdf" class="download-btn" download>
-          <span class="download-icon">⬇</span> Lebenslauf herunterladen
-        </a>
-      </div>
-    </section>
+/* DOWNLOAD BUTTON */
+.download-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-  </main>
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #E30613;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
-  <footer>
-    <p>&copy; 2026 Piratheeshan Mathymoghan</p>
-  </footer>
+.download-btn:hover {
+  background: #b1040f;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+}
 
-</body>
-</html>
+.download-icon {
+  font-size: 1.3rem;
+}
+
+/* ANIMATION */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  margin-top: 40px;
+}
