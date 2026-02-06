@@ -1,4 +1,8 @@
 /* GLOBAL */
+html {
+  zoom: 2;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
